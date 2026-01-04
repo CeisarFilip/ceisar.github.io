@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #4bb781;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #4bb781;
+    border-bottom: 3px solid #b74b4b;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #4bb781;
+        border-bottom: 3px solid #4bb781;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #4bb781;
+    }
+}
+
+section{
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 2.3;
+}
+
+span{
+    color: #4bb781;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #4bb781;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #4bb781;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #4bb781;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #4bb781;
+    box-shadow: 0  0 25px #4bb781;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #4bb781;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #4bb781;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #4bb781;
+    color: black;
+    box-shadow: 0 0 25px #4bb781;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "Tentang Saya";
+    color: #4bb781;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #4bb781;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "About Me";
+    }
+    21%, 40%{
+        content: "Sobre mí";
+    }
+    41%, 60%{
+        content: "關於我";
+    }
+    61%, 80%{
+        content: "私について";
+    }
+    81%, 100%{
+        content: "Informazioni su di me";
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+.skills-container {
+  width: 100%;
+  max-width: 500px; /* Sesuaikan lebar dengan layout Anda */
+  font-family: Arial, sans-serif;
+  color: white; /* Mengikuti tema gelap website Anda */
+}
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #333; /* Warna dasar bar yang kosong */
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #ffffff; /* Warna biru seperti di gambar */
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+/* Tooltip persentase (Opsional jika ingin persis gambar) */
+.percentage {
+  background: #ffffff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.container {
+    display: flex;
+    align-items: flex-start; /* Menjaga elemen tetap di atas */
+    justify-content: center;
+    gap: 50px; /* Jarak antara foto dan teks */
+    padding: 50px;
+    background-color: black;
+}
+
+.profile-img img {
+    width: 350px; /* Sesuaikan ukuran */
+    border-radius: 50% 50% 0 0; /* Membuat bentuk lengkung atas seperti di foto */
+    object-fit: cover;
+}
+
+.about-content {
+    max-width: 600px;
+    color: white;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Foto pindah ke atas teks saat di HP */
+        align-items: center;
+    }
+}
+.education{
+    background-color: black;
+}
+
+.section-title{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    color: white;
+}
+
+.education-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 800px;
+}
+
+.education-item{
+    position: relative;
+    padding-left: 2.5rem;
+    border-left: 3px solid #4bb781;
+}
+
+.edu-year{
+    font-size: 1.4rem;
+    color: #4bb781;
+    font-weight: 600;
+}
+
+.education-item h3{
+    font-size: 2.2rem;
+    margin: 0.5rem 0;
+}
+
+.education-item p{
+    font-size: 1.6rem;
+    color: #ccc;
+}
+
+.edu-desc{
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+.experience{
+    padding: 6rem 9%;
+    background-color: black;
+}
+
+.section-title{
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-title::after{
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #4bb781;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.experience-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.experience-item{
+    background: #111;
+    padding: 2.5rem;
+    border-left: 4px solid #4bb781;
+    transition: 0.3s ease;
+}
+
+.experience-item:hover{
+    transform: translateX(10px);
+    background: #151515;
+}
+
+.exp-date{
+    font-size: 1.4rem;
+    color: #4bb781;
+}
+
+.experience-item h3{
+    font-size: 2.2rem;
+    margin: 0.5rem 0;
+}
+
+.experience-item h4{
+    font-size: 1.6rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+}
+
+.experience-item p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #ddd;
+}
+.contact{
+    padding: 6rem 9%;
+    background-color: black;
+}
+
+.contact-container{
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.contact-info{
+    flex: 1;
+}
+
+.contact-info h3{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.contact-info ul{
+    list-style: none;
+}
+
+.contact-info ul li{
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    color: #ddd;
+}
+
+.contact-info ul li i{
+    color: #4bb781;
+    margin-right: 1rem;
+}
+
+.contact-form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    background: #111;
+    border: 1px solid #222;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 150px;
+}
+
+.contact-form button{
+    padding: 1.5rem;
+    background: #4bb781;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover{
+    background: #4bb781;
+}
+/* Area konten yang boleh scroll */
+.content{
+    position: absolute;
+    top: 90px; /* sesuaikan dengan tinggi header + margin-top */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 90px);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar halus (opsional tapi elegan) */
+.content::-webkit-scrollbar{
+    width: 6px;
+}
+
+.content::-webkit-scrollbar-thumb{
+    background: #4bb781;
+    border-radius: 10px;
+}
+.social-icons{
+    position: relative;
+    z-index: 9999;
+}
+
+.social-icons a{
+    pointer-events: auto;
+}
+.hire-btn{
+    margin-top: 2rem;
+}
+
+.hire-btn:hover{
+    box-shadow: 0 0 30px rgba(183, 75, 75, 0.8);
+}
+
+.hire-btn:focus{
+    outline: 2px dashed #4bb781;
+    outline-offset: 6px;
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    background: linear-gradient(
+        120deg,
+        #000000,
+        #120808,
+        #1a0f0f,
+        #000000
+    );
+    background-size: 400% 400%;
+    animation: bgFlow 20s ease infinite;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -9;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(183,75,75,0.18), transparent 40%),
+        radial-gradient(circle at 70% 80%, rgba(183,75,75,0.12), transparent 45%);
+    animation: glowDrift 16s ease-in-out infinite alternate;
+    pointer-events: none;
+}
