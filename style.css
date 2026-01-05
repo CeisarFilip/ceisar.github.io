@@ -201,7 +201,7 @@ span{
 }
 
 .typing-text span::before{
-    content: "Tentang Saya";
+    content: "Halo saya Ceisar";
     color: #4bb781;
     animation: words 20s infinite;
 }
@@ -225,19 +225,19 @@ span{
 
 @keyframes words{
     0%, 20%{
-        content: "About Me";
+        content: "Hello, I’m Ceisar.";
     }
     21%, 40%{
-        content: "Sobre mí";
+        content: "Hola, soy Ceisar.";
     }
     41%, 60%{
-        content: "關於我";
+        content: "你好，我叫 Ceisar。";
     }
     61%, 80%{
-        content: "私について";
+        content: "はじめまして、Ceisar と申します。";
     }
     81%, 100%{
-        content: "Informazioni su di me";
+        content: "Ciao, sono Ceisar.";
     }
 }
 
@@ -581,4 +581,5 @@ body::after {
         radial-gradient(circle at 70% 80%, rgba(183,75,75,0.12), transparent 45%);
     animation: glowDrift 16s ease-in-out infinite alternate;
     pointer-events: none;
+
 }
