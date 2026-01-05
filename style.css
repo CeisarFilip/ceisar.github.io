@@ -201,7 +201,7 @@ span{
 }
 
 .typing-text span::before{
-    content: "Halo, saya Ceisar";
+    content: "Tentang saya";
     color: #4bb781;
     animation: words 20s infinite;
 }
@@ -225,19 +225,19 @@ span{
 
 @keyframes words{
     41%, 60%{
-        content: "Hello, I’m Ceisar.";
+        content: "About Me";
     }
     41%, 60%{
-        content: "Hola, soy Ceisar.";
+        content: "Sobre mí";
     }
     41%, 60%{
-        content: "你好，我叫 Ceisar。";
+        content: "关于我";
     }
     41%, 60%{
-        content: "はじめまして、Ceisar と申します。";
+        content: "私について";
     }
     41%, 60%{
-        content: "Ciao, sono Ceisar.";
+        content: "Su di me";
     }
 }
 
@@ -583,4 +583,5 @@ body::after {
     pointer-events: none;
 
 }
+
 
