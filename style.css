@@ -224,20 +224,24 @@ span{
 }
 
 @keyframes words{
-    41%, 60%{
-        content: "About Me";
+    0%, 20%{
+    content: "About Me";
     }
-    41%, 60%{
-        content: "Sobre mí";
+
+    21%, 40%{
+    content: "Sobre mí";
     }
+
     41%, 60%{
-        content: "关于我";
+    content: "關於我";
     }
-    41%, 60%{
-        content: "私について";
+
+    61%, 80%{
+    content: "私について";
     }
-    41%, 60%{
-        content: "Su di me";
+
+    81%, 100%{
+    content: "Su di me";
     }
 }
 
@@ -583,5 +587,6 @@ body::after {
     pointer-events: none;
 
 }
+
 
 
